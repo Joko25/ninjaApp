@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <title>Read Products</title>
+ 	
+ 	<!-- angular material style sheet -->
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+	 
+	<!-- roboto font -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+
+	<!-- Material -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	 
+	<!-- include custom CSS -->
+	<link rel="stylesheet" href="app/asserts/css/custom.css" />
+
+</head>
+<body>
+ 
+	<!-- app container will be here -->
+
+	<div ng-app="ninjaApp" class="container">
+		<md-content class="md-padding">
+		    <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+		    	<md-nav-item md-nav-href="#/product">PRODUCT</md-nav-item>
+		    	<md-nav-item md-nav-href="#/category">CATEGORY</md-nav-item>
+		    </md-nav-bar>
+		    <div class="ext-content">
+		     	<div>
+					<div ng-view></div>
+				</div>
+		    </div>
+		  </md-content>
+		<!-- <ng-include src="'./app/products/read_products.template.html'"></ng-include> -->
+	</div>
+	
+	 <!-- include angular js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+	 
+	<!-- needed for angular material -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+	 
+	<!-- angular material Library -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+	<!-- app -->
+	<script type="text/javascript" src="app/app.js"></script>
+
+	<script type="text/javascript" src="app/route.js"></script>
+	 
+	<!-- products controller -->
+	<script type="text/javascript" src="app/js/products.controller.js"></script>
+	<script type="text/javascript" src="app/js/categories.controller.js"></script>
+	 
+	<!-- products factory -->
+	<script type="text/javascript" src="app/js/products.factory.js"></script>
+	<script type="text/javascript" src="app/js/categories.factory.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<div layout="row" ng-cloak> 
+<!-- ng-controller="productsController" -->
+    <div flex="10"></div>
+ 
+    <div flex="80" class='m-20px-0'>
+ 
+        <!-- page title & 'create product' button -->
+        <md-toolbar class="md-hue-2">
+            <div class="md-toolbar-tools">
+                <!-- page title -->
+                <div flex md-truncate>
+                    <h3 class="md-headline">Category</h3>
+                </div>
+ 
+                <!-- 'create' product button will be here -->
+                <!-- button for creating product -->
+                <a href="" ng-click="showCreateForm()"><i class="material-icons">add_circle_outline</i></a>
+
+            </div>
+        </md-toolbar>
+ 
+        <!-- 'search' bar will be here -->
+        <!-- used for searching products in api -->
+        <!-- <md-input-container class="md-block m-b-0px">
+            <form ng-submit="searchProducts()">
+                <label>Search products...</label>
+                <input ng-model="product_search_keywords">
+            </form>
+        </md-input-container> -->
+ 
+        <md-content flex>
+            <!-- show product record list -->
+            <md-list ng-init="readCategory()">
+                <md-list-item class="md-3-line" ng-repeat="a in categories" ng-click="readOne(a.id)">
+ 
+                    <!-- product information -->
+                    <div class="md-list-item-text">
+                        <h3>{{a.name}}</h3>
+                        <h4>{{a.description}}</h4>
+                    </div>
+ 
+                    <!-- 'read one', 'edit' and 'delete' buttons -->
+                    <div class="md-secondary-container">
+                        <!-- 'read one' button will be here -->
+                        <!-- <md-button class="md-raised md-info" ng-click="readOne(product.id)">Read One</md-button>-->
+                        <md-button class="md-raised md-primary" ng-click="showUpdateCategoryForm(product.id)">Edit</md-button>
+                        <md-button class="md-raised md-danger" ng-click="confirmDeleteCategory($event, product.id)"><i class="material-icons">clear</i></md-button> 
+                    </div>
+                    <md-divider ng-if="!$last"></md-divider>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </div>
+ 
+    <div flex="10"></div>
+</div> <!-- end row -->
